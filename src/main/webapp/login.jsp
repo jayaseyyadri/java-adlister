@@ -33,7 +33,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 
 
     </form>
-<%--check if its a post request --%>
+<%--check if its a post request  pageContext is an Implicit object and request is a method--%>
 <c:if test="${pageContext.request.method.equals('post')}">
     <c:if test="${param.username.equals(\"admin\") && param.password.equals(\"password\")}">
         <% response.sendRedirect("/profile.jsp"); %>
