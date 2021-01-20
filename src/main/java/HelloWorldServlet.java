@@ -1,4 +1,3 @@
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,22 +7,18 @@ import java.io.PrintWriter;
 
 @WebServlet (name="HelloWorldServlet",urlPatterns ="/name")
 public class HelloWorldServlet extends HttpServlet{
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-    res.setContentType("text/html");
-    PrintWriter out = res.getWriter();
-//
-//    out.println("<h1>Hello, World!</h1>");
 
-    String name = req.getParameter("name");
+        String YourName = req.getParameter("YourName");
 
-//      out.println("<h1> Hi" + name + "</h1>");
-
-        if(name==null) {
-
-            name = " Hello World ";
+            if(YourName==null) {
+                YourName = "  World ";
+        }
+            out.println("<h1> hello " + YourName +" </h1>");
     }
-        out.println(" hello " + name);
-}
 
 }
