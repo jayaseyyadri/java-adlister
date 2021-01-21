@@ -8,7 +8,7 @@ import java.io.IOException;
 @WebServlet (name = "PickColorServlet" , urlPatterns = "/pickcolor")
 public class PickColorServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        req.getRequestDispatcher("/color-app/pickcolor.jsp").forward(req,res);
     }
 }

@@ -8,9 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Your color</title>
+    <style>
+        body{
+            background-color: ${color};
+        }
+    </style>
 </head>
-<body>
+    <body>
 
-</body>
+    </body>
 </html>

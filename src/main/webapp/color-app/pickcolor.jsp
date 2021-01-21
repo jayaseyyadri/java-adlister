@@ -12,8 +12,8 @@
 </head>
 <body>
     <form  action="/viewcolor" method="post">
-        <label for="colorName" >Pick a color</label>
-        <input type="text" name="colorName" id="colorName">
+        <label for="color" >Pick a color</label>
+        <input type="text" name="color" id="color">
 
         <button type="submit">Submit</button>
     </form>

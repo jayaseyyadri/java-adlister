@@ -9,7 +9,10 @@ import java.io.IOException;
 public class ViewColorServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        String color =req.getParameter("color");
+        req.setAttribute("color",color);
+        req.getRequestDispatcher("/color-app/viewcolor.jsp").forward(req,res);
 
     }
 }
