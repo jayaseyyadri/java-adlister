@@ -1,4 +1,7 @@
+package dao;
+
 import java.util.List;
+import models.Ad;
 
 public interface Ads {
     // get a list of all the ads
